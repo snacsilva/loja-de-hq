@@ -1,12 +1,12 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Quadrinhos from '@/components/Quadrinho'
+import Comics from '@/components/Comics'
 
 Vue.use(Router)
 
 
 export default new Router({
   routes: [
-    { path:'/', component: Quadrinhos }
+    { path:'/', component: Comics }
   ]
 })

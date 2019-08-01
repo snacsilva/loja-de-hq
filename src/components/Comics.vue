@@ -14,7 +14,7 @@
 import Comics from '@/services/base/';
 
 export default {
-    name: 'quadrinho',
+    name: 'comics',
     data() {
         return {
             quadrinhos: [],
