@@ -1,26 +1,39 @@
 <template>
-    <md-card class="card-default">
-        <h2>{{titulo}}</h2>
-        <img class="imagem-quadrinho" :src="imagem"/>
-        <p>{{descricao}}</p>
-    </md-card>
+  <div id="comics" class="md-layout">
+    <div class="md-layout-item md-size-33" v-for="quadrinho in quadrinhos" :key="quadrinho.id">
+        <md-card class="card-default">
+            <h2>{{quadrinho.title}}</h2>
+            <img class="imagem-quadrinho" :src="getImagem(quadrinho)"/>
+            <p>{{quadrinho.description}}</p>
+        </md-card>
+    </div>
+  </div>
 </template>
 
 <script>
+import Comics from '@/services/base/';
+
 export default {
     name: 'quadrinho',
-    props: {
-        imagem: {
-            type: String
-        },
-        titulo: {
-            type: String,
-            required: true
-        },
-        descricao: {
-            type: String
+    data() {
+        return {
+            quadrinhos: [],
+            
         }
+    },
+     created() {
+        var self = this
+        Comics.getAllComics(10, comics => {
+        self.quadrinhos = comics.data.data.results;
+    })
+  },
+  methods: {
+    getImagem: function(quadrinho) {
+      if (quadrinho.images.length) {
+        return quadrinho.images[0].path + '/portrait_medium.jpg';
+      }
     }
+  }
 }
 </script>
 
