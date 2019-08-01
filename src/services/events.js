@@ -1,17 +1,17 @@
 import base from './base'
 
-const get_all_events = () => base.get('events')
-const get_event = (id) => base.get(`/events/${id}`)
-const get_event_chars = (id) => base.get(`/events/${id}/characters`)
-const get_event_creators = (id) => base.get(`/events/${id}/creators`)
-const get_event_events = (id) => base.get(`/events/${id}/events`)
-const get_event_stories = (id) => base.get(`/events/${id}/stories`)
+const getAllEvents = () => base.get('events')
+const getEvent = (id) => base.get(`/events/${id}`)
+const getEventChars = (id) => base.get(`/events/${id}/characters`)
+const getEventCreators = (id) => base.get(`/events/${id}/creators`)
+const getEventEvents = (id) => base.get(`/events/${id}/events`)
+const getEventStories = (id) => base.get(`/events/${id}/stories`)
 
 export default {
-  get_all_events,
-  get_event,
-  get_event_chars,
-  get_event_creators,
-  get_event_events,
-  get_event_stories
+  getAllEvents,
+  getEvent,
+  getEventChars,
+  getEventCreators,
+  getEventEvents,
+  getEventStories
 }
