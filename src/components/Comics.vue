@@ -2,7 +2,7 @@
   <div id="comics" class="md-layout">
     <div class="md-layout-item md-size-33" v-for="quadrinho in quadrinhos" :key="quadrinho.id">
         <md-card class="card-default">
-            <h2>{{quadrinho.title}}</h2>
+            <a :href="quadrinho.resourceURI"> <h2>{{quadrinho.title}}</h2></a>
             <img class="imagem-quadrinho" :src="getImagem(quadrinho)"/>
             <p>{{quadrinho.description}}</p>
         </md-card>
