@@ -1,11 +1,11 @@
-import base from './base'
+import base from './base';
 
-const getAllComics = () => base.get('comics')
-const getComic = (id) => base.get(`/comics/${id}`)
-const getComicChars = (id) => base.get(`/comics/${id}/characters`)
-const getComicCreators = (id) => base.get(`/comics/${id}/creators`)
-const getComicEvents = (id) => base.get(`/comics/${id}/events`)
-const getComicStories = (id) => base.get(`/comics/${id}/stories`)
+const getAllComics = () => base.get('comics');
+const getComic = id => base.get(`/comics/${id}`);
+const getComicChars = id => base.get(`/comics/${id}/characters`);
+const getComicCreators = id => base.get(`/comics/${id}/creators`);
+const getComicEvents = id => base.get(`/comics/${id}/events`);
+const getComicStories = id => base.get(`/comics/${id}/stories`);
 
 export default {
   getAllComics,
@@ -14,4 +14,4 @@ export default {
   getComicCreators,
   getComicEvents,
   getComicStories
-}
+};
