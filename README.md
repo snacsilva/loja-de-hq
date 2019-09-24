@@ -1,3 +1,4 @@
+[Em Construção]
 ## Single Page Application de uma loja de quadrinhos utilizando a API da Marvel para todos os consumos de dados.
 App consiste em:
 1. Uma tela de lista de quadrinhos de forma paginada ou infinite loading;
